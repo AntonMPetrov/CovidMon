@@ -1,0 +1,10 @@
+<mat-form-field floatLabel="always">
+  <mat-label>Metric</mat-label>
+  <mat-select [(value)]="selected" hideSingleSelectionIndicator (selectionChange)="onChangeMetric($event)"
+    placeholder="Select metric">
+    <mat-option *ngFor="let metric of metrics" [value]="metric.value">
+      {{metric.label}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<p>Selected:{{selected}}</p>
